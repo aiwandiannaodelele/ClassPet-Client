@@ -1,46 +1,51 @@
-name: build
+name: Publish Release
 
 on:
-  workflow_dispatch:
   push:
     tags:
-      - "v*"
+      - 'v*'
 
 jobs:
-  build:
+  publish-tauri:
     permissions:
       contents: write
     strategy:
       fail-fast: false
       matrix:
         include:
-          - platform: macos-latest
-            args: ""
-          - platform: windows-latest
-            args: ""
+          - platform: 'windows-latest'
+            args: ''
+          - platform: 'macos-latest'
+            args: '--target universal-apple-darwin'
+
     runs-on: ${{ matrix.platform }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - uses: actions/setup-node@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
         with:
-          node-version: "lts/*"
-          cache: "npm"
+          version: 10.x
 
-      - name: install frontend deps
-        run: npm install
-
-      - name: install web deps
-        run: npm --prefix web install
-
-      - uses: dtolnay/rust-toolchain@stable
-
-      - uses: swatinem/rust-cache@v2
+      - name: Setup Node
+        uses: actions/setup-node@v6
         with:
-          workspaces: "./src-tauri -> target"
+          node-version: lts/*
 
-      - uses: tauri-apps/tauri-action@v0
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build Next.js
+        run: pnpm build
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Build and Release
+        uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           args: ${{ matrix.args }}
+          tagName: ${{ github.ref_name }}
+          releaseName: "Release ${{ github.ref_name }}"
