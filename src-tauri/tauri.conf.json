@@ -2,11 +2,11 @@
   "$schema": "https://schema.tauri.app/config/2",
   "productName": "ClassPet",
   "version": "0.1.0",
-  "identifier": "com.classpet.client",
+  "identifier": "cc.cd.classpet.client",
   "build": {
-    "beforeDevCommand": "npm run dev",
+    "beforeDevCommand": "pnpm dev",
     "devUrl": "http://localhost:1420",
-    "beforeBuildCommand": "npm run build",
+    "beforeBuildCommand": "pnpm build",
     "frontendDist": "../out"
   },
   "app": {
@@ -27,7 +27,6 @@
       {
         "label": "float",
         "title": "ClassPet",
-        "url": "/float",
         "width": 144,
         "height": 144,
         "resizable": false,
