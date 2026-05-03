@@ -1,57 +1,57 @@
-# ClassPet Client (桌面端)
+# ClassPet Client (Desktop)
 
-ClassPet 的跨平台桌面客户端，基于 **Tauri v2** 和 **Next.js** 构建。
+A cross-platform desktop client for ClassPet, built with **Tauri v2** and **Next.js**.
 
-## ✨ 功能特性
+## ✨ Features
 
-- **透明悬浮球**：支持在桌面上随意拖动的透明悬浮窗口，实时展示应用状态。
-- **高性能架构**：利用 Rust 构建后端，确保极低的内存占用和极快的响应速度。
-- **现代化 UI**：前端采用 Next.js + shadcn/ui，界面精致且支持响应式。
-- **服务器选择**：内置官方服务器快速选择，支持自定义实例地址。
-- **托盘管理**：完善的系统托盘菜单，支持主窗口与悬浮球的快速切换。
-- **权限管理**：预设 macOS 麦克风与摄像头权限声明，开箱即用。
+- **Transparent Floating Ball**: A movable, transparent floating window on your desktop to display real-time app status.
+- **High-Performance Architecture**: Powered by Rust (Tauri) for minimal memory footprint and blazing fast performance.
+- **Modern UI**: Frontend built with Next.js and shadcn/ui for a polished, responsive user experience.
+- **Server Selection**: Built-in official server selection and support for custom instance URLs.
+- **System Tray Integration**: Full-featured system tray menu for quick toggling between the main window and the floating ball.
+- **Permission Management**: Pre-configured privacy descriptions for macOS microphone and camera access.
 
-## 🛠️ 技术栈
+## 🛠️ Tech Stack
 
-- **后端**: [Tauri v2](https://v2.tauri.app/) (Rust)
-- **前端**: [Next.js](https://nextjs.org/) (React, Tailwind CSS, shadcn/ui)
-- **构建工具**: npm + cargo
+- **Backend**: [Tauri v2](https://v2.tauri.app/) (Rust)
+- **Frontend**: [Next.js](https://nextjs.org/) (React, Tailwind CSS, shadcn/ui)
+- **Build Tool**: npm + cargo
 
-## 🚀 快速开始
+## 🚀 Getting Started
 
-### 开发环境准备
+### Prerequisites
 
-1. 安装 [Rust](https://www.rust-lang.org/tools/install)。
-2. 安装 Node.js (建议 v18+)。
-3. 安装 Tauri 依赖（具体参考 [Tauri 官方文档](https://v2.tauri.app/start/prerequisites/)）。
+1. Install [Rust](https://www.rust-lang.org/tools/install).
+2. Install Node.js (v18+ recommended).
+3. Install Tauri dependencies (see [Tauri Documentation](https://v2.tauri.app/start/prerequisites/)).
 
-### 启动开发服务器
+### Development
 
 ```bash
-# 安装根目录依赖
+# Install root dependencies
 npm install
 
-# 安装前端依赖
+# Install frontend dependencies
 cd web
 npm install
 cd ..
 
-# 启动 tauri 开发环境
+# Start development environment
 npm run tauri dev
 ```
 
-### 构建发布版本
+### Build
 
 ```bash
 npm run tauri build
 ```
 
-## 📂 项目结构
+## 📂 Project Structure
 
-- `src-tauri/`: Rust 后端代码及配置。
-- `web/`: Next.js 前端项目。
-- `.github/workflows/`: GitHub Actions 自动构建脚本。
+- `src-tauri/`: Rust backend logic and configuration.
+- `web/`: Next.js frontend application.
+- `.github/workflows/`: GitHub Actions for automated builds.
 
-## 📄 许可证
+## 📄 License
 
-MIT License
+This project is licensed under the **AGPL-3.0 License**.
