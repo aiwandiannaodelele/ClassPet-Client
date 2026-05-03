@@ -10,8 +10,13 @@ web/node_modules
 !.yarn/versions
 
 # Next.js
+# 旧目录
 web/.next/
 web/out/
+# 新目录（你现在的根目录）
+.next/
+out/
+
 next-env.d.ts
 *.tsbuildinfo
 
