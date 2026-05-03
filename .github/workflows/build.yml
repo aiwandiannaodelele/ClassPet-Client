@@ -27,11 +27,8 @@ jobs:
           node-version: "lts/*"
           cache: "npm"
 
-      - name: install frontend deps
+      - name: install dependencies
         run: npm install
-
-      - name: install web deps
-        run: npm --prefix web install
 
       - uses: dtolnay/rust-toolchain@stable
 

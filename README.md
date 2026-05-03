@@ -1,57 +1,36 @@
-# ClassPet Client (Desktop)
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A cross-platform desktop client for ClassPet, built with **Tauri v2** and **Next.js**.
+## Getting Started
 
-## ✨ Features
-
-- **Transparent Floating Ball**: A movable, transparent floating window on your desktop to display real-time app status.
-- **High-Performance Architecture**: Powered by Rust (Tauri) for minimal memory footprint and blazing fast performance.
-- **Modern UI**: Frontend built with Next.js and shadcn/ui for a polished, responsive user experience.
-- **Server Selection**: Built-in official server selection and support for custom instance URLs.
-- **System Tray Integration**: Full-featured system tray menu for quick toggling between the main window and the floating ball.
-- **Permission Management**: Pre-configured privacy descriptions for macOS microphone and camera access.
-
-## 🛠️ Tech Stack
-
-- **Backend**: [Tauri v2](https://v2.tauri.app/) (Rust)
-- **Frontend**: [Next.js](https://nextjs.org/) (React, Tailwind CSS, shadcn/ui)
-- **Build Tool**: npm + cargo
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-1. Install [Rust](https://www.rust-lang.org/tools/install).
-2. Install Node.js (v18+ recommended).
-3. Install Tauri dependencies (see [Tauri Documentation](https://v2.tauri.app/start/prerequisites/)).
-
-### Development
+First, run the development server:
 
 ```bash
-# Install root dependencies
-npm install
-
-# Install frontend dependencies
-cd web
-npm install
-cd ..
-
-# Start development environment
-npm run tauri dev
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-### Build
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```bash
-npm run tauri build
-```
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## 📂 Project Structure
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-- `src-tauri/`: Rust backend logic and configuration.
-- `web/`: Next.js frontend application.
-- `.github/workflows/`: GitHub Actions for automated builds.
+## Learn More
 
-## 📄 License
+To learn more about Next.js, take a look at the following resources:
 
-This project is licensed under the **AGPL-3.0 License**.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
