@@ -1,9 +1,11 @@
 name: Publish Release
 
+# 这里开启 手动触发 + 打tag触发
 on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:  # 👈 加了这个，就能手动点按钮运行
 
 jobs:
   publish-tauri:
