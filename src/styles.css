@@ -1,0 +1,64 @@
+@import "./assets/shadcn-html/theme/default-semantic-tokens.css";
+@import "./assets/shadcn-html/components/button.css";
+@import "./assets/shadcn-html/components/input.css";
+@import "./assets/shadcn-html/components/label.css";
+@import "./assets/shadcn-html/components/card.css";
+
+@layer base, components;
+
+:root {
+  --primary: #f6c000;
+  --primary-foreground: #1a1a1a;
+  --ring: rgba(246, 192, 0, 0.6);
+  --background: #fff8dc;
+  --card: #ffffff;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.float-root {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.float-ball {
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: oklch(from var(--background) l c h / 0.95);
+  box-shadow: var(--shadow-xl);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.float-logo {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+}

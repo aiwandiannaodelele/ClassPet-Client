@@ -1,0 +1,10 @@
+[[permission]]
+identifier = "main"
+description = "Main permissions for the app"
+commands.allow = [
+    "get_instance_url",
+    "set_instance_url",
+    "show_main",
+    "hide_main",
+    "open_settings_command"
+]
